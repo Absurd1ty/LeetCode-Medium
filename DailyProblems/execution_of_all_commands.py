@@ -16,17 +16,12 @@ is the number of instructions the robot can execute if the robot begins executin
 """
 class Solution(object):
     def executeInstructions(self, n, startPos, s):
-        # Initialize an array to store the number of instructions that can be executed starting from each position
         answer = [0] * len(s)
         for i in range(len(s)):
-            # Reset the position of the robot to the start position
             row = startPos[0]
             col = startPos[1]
-            # Initialize a counter to keep track of the number of instructions executed
             count = 0
-            # Iterate through the instructions starting from the ith position
             for j in range(i, len(s)):
-                # Check if the next move would take the robot outside the grid
                 if s[j] == 'L' and col == 0:
                     break
                 if s[j] == 'R' and col == n - 1:
@@ -36,7 +31,6 @@ class Solution(object):
                 if s[j] == 'D' and row == n - 1:
                     break
 
-                # Update the current position of the robot based on the instruction
                 if s[j] == 'L':
                     col -= 1
                 elif s[j] == 'R':
@@ -46,7 +40,6 @@ class Solution(object):
                 elif s[j] == 'D':
                     row += 1
                 count += 1
-            # Update the answer array with the number of instructions executed
             answer[i] = count
 
         return answer

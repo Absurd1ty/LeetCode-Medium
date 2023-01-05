@@ -6,10 +6,8 @@ You may return the answer in any order.
 """
 class Solution(object):
     def combine(self, n, k):
-        # base case
         if k == 0:
             return [[]]
-        #
         else:
             comb = []
             for c in self.combine(n, k-1):
