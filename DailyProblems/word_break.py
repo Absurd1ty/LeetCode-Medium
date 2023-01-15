@@ -26,4 +26,4 @@ class Solution(object):
 
 
 test = Solution()
-print(test.wordBreak(("catsandog"),  ["cats","dog","sand","and","cat"]))
+print(test.wordBreak(("catsandogs"),  ["cats","dog","sand","and","cat"]))

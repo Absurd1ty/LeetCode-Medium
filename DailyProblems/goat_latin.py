@@ -32,5 +32,5 @@ class Solution(object):
 
 
 test = Solution()
-print(test.toGoatLatin("I speak Goat Latin"))
+print(test.toGoatLatin("I speak goat Latin"))
 
